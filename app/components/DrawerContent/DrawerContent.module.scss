@@ -1,0 +1,35 @@
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+
+  .drawerRow {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 0px;
+    gap: 12px;
+    align-self: stretch;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    .rowInput {
+      max-width: 340px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+
+      .files {
+        display: flex;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        border-radius: 8px;
+        background: #f3f4f6;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+:root {
+  --background: #f3f4f6;
+  --foreground: #171717;
+  --secondaryColor: #6e747d;
+  --secondaryBackground: #000eef;
+  --font-poppins: "Poppins", "Poppins Fallback";
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background) !important;
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.secondaryText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--secondaryColor);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

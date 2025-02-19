@@ -1,0 +1,107 @@
+.tableContainer {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+  margin: auto;
+}
+
+.quotesTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  .tableRow {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 12px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+    }
+  }
+
+  .rowCell {
+    text-align: left;
+    font-size: 14px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    .cellLabel {
+      display: none;
+      font-weight: 600;
+      color: var(--secondaryColor);
+      margin-bottom: 4px;
+    }
+
+    .cellValue {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .headerCell {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--secondaryColor);
+    white-space: pre-wrap;
+  }
+
+  .tableBody {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerRow {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 12px;
+    white-space: nowrap;
+  }
+}
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .closeButton {
+    cursor: pointer;
+  }
+}
+.drawerButtonGroup {
+  margin-top: 25px;
+  display: flex;
+  gap: 4px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .quotesTable {
+    background-color: white;
+    .headerRow {
+      display: none;
+    }
+
+    .tableRow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid #ccc;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rowCell {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 8px;
+      border-bottom: 1px solid #f0f0f0;
+
+      .cellLabel {
+        display: inline-block;
+      }
+    }
+  }
+}
