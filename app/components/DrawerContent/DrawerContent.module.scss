@@ -14,11 +14,19 @@
     align-self: stretch;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     .rowInput {
+      display: flex;
+      justify-content: space-around;
+      gap: 12px;
       max-width: 340px;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
+
+      .reviews {
+        display: flex;
+        justify-content: space-around;
+      }
 
       .files {
         display: flex;

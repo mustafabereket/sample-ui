@@ -10,43 +10,43 @@ import ChatIcon from "../../../public/chat-icon.svg";
 import SendIcon from "../../../public/send-icon.svg";
 import DollarIcon from "../../../public/dollar-icon.svg";
 
-const ProgressBar = () => {
-  const stepsList = [
-    {
-      icon: PersonIcon,
-      text: (
-        <>
-          Identified <span className={styles.numberHighlight}>115</span> best
-          matches out of 2,081,201 suppliers
-        </>
-      ),
-      subText:
-        "We search for suppliers that match your exact product requirement and location.",
-    },
-    {
-      icon: SendIcon,
-      text: (
-        <>
-          Reached out to <span className={styles.numberHighlight}>115</span>{" "}
-          suppliers
-        </>
-      ),
-      subText:
-        "We share your product info with matched suppliers to understand their interest.",
-    },
-    {
-      icon: ChatIcon,
-      text: "Engaging suppliers",
-      subText:
-        "We communicate with interested suppliers to verify their terms to prep for quotes.",
-    },
-    {
-      icon: DollarIcon,
-      text: "Received quotes",
-      subText: "We receive detailed quote that is ready for you to select.",
-    },
-  ];
+const stepsList = [
+  {
+    icon: PersonIcon,
+    text: (
+      <>
+        Identified <span className={styles.numberHighlight}>115</span> best
+        matches out of 2,081,201 suppliers
+      </>
+    ),
+    subText:
+      "We search for suppliers that match your exact product requirement and location.",
+  },
+  {
+    icon: SendIcon,
+    text: (
+      <>
+        Reached out to <span className={styles.numberHighlight}>115</span>{" "}
+        suppliers
+      </>
+    ),
+    subText:
+      "We share your product info with matched suppliers to understand their interest.",
+  },
+  {
+    icon: ChatIcon,
+    text: "Engaging suppliers",
+    subText:
+      "We communicate with interested suppliers to verify their terms to prep for quotes.",
+  },
+  {
+    icon: DollarIcon,
+    text: "Received quotes",
+    subText: "We receive detailed quote that is ready for you to select.",
+  },
+];
 
+const ProgressBar = () => {
   const [activeStep, setActiveStep] = useState(1);
   useEffect(() => {
     const interval = setInterval(() => {

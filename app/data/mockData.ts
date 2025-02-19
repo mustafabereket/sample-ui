@@ -1,6 +1,6 @@
 export const quotes = [
   {
-    id: 358,
+    id: 38,
     status: "surfaced",
     deposit_percentage: null,
     product_quotes: [
@@ -43,7 +43,7 @@ export const quotes = [
           },
         ],
         similar_products: [],
-        tags: ["highly-rated"],
+        tags: ["highly-rated", "fastest-lead-time"],
       },
     ],
     created_at: "2024-11-13T13:27:14.543220Z",
@@ -89,7 +89,7 @@ export const quotes = [
         client_notes: "",
         files: [],
         similar_products: [],
-        tags: [],
+        tags: ["best-value", "fastest-lead-time"],
       },
     ],
     created_at: "2024-11-13T13:30:56.961602Z",
@@ -155,7 +155,7 @@ export const quotes = [
     },
   },
   {
-    id: 358,
+    id: 58,
     status: "surfaced",
     deposit_percentage: null,
     product_quotes: [
@@ -198,7 +198,7 @@ export const quotes = [
           },
         ],
         similar_products: [],
-        tags: ["highly-rated"],
+        tags: ["highly-rated", "best-value"],
       },
       {
         id: 512,
@@ -253,7 +253,7 @@ export const quotes = [
     supplier_previous_customers: null,
     similar_products: [],
     supplier: {
-      supplier_cloak: "Supplier 1",
+      supplier_cloak: "Supplier 4",
       average_score: 5.0,
     },
   },
@@ -301,7 +301,7 @@ export const quotes = [
           },
         ],
         similar_products: [],
-        tags: ["highly-rated"],
+        tags: ["highly-rated", "fastest-lead-time"],
       },
     ],
     created_at: "2024-11-13T13:27:14.543220Z",
@@ -315,7 +315,7 @@ export const quotes = [
     supplier_previous_customers: null,
     similar_products: [],
     supplier: {
-      supplier_cloak: "Supplier 1",
+      supplier_cloak: "Supplier 6",
       average_score: 5.0,
     },
   },
@@ -363,7 +363,7 @@ export const quotes = [
           },
         ],
         similar_products: [],
-        tags: ["highly-rated"],
+        tags: ["highly-rated", "fastest-lead-time"],
       },
     ],
     created_at: "2024-11-13T13:27:14.543220Z",
@@ -377,7 +377,7 @@ export const quotes = [
     supplier_previous_customers: null,
     similar_products: [],
     supplier: {
-      supplier_cloak: "Supplier 4",
+      supplier_cloak: "Supplier 5",
       average_score: 5.0,
     },
   },

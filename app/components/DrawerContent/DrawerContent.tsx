@@ -5,10 +5,16 @@ import Heading from "../ui/Heading/Heading";
 import InfoIcon from "../../../public/info-icon.svg";
 import RatingsIcon from "./../../../public/ratings-icon.svg";
 import FileIcon from "./../../../public/file-icon.svg";
+import { ProductQuote, SupplierPayload } from "../../types";
+import LabelQuote from "../ui/LabelQuote/LabelQuote";
 
-const DrawerContent = ({ item }) => {
+interface DrawerContentProps {
+  item: SupplierPayload;
+}
+
+const DrawerContent = ({ item }: DrawerContentProps) => {
   console.log(item);
-  const quote = item?.product_quotes?.[0] || {};
+  const quote = item?.product_quotes?.[0] || ({} as unknown as ProductQuote);
 
   return (
     <div className={styles.drawerContent}>
@@ -60,8 +66,14 @@ const DrawerContent = ({ item }) => {
       <div className={styles.drawerRow}>
         <div className="secondaryText">Payment Terms</div>
         <div className={styles.rowInput}>
-          {item?.deposit_percentage * 100}% upfront,{" "}
-          {100 - item?.deposit_percentage * 100}% after reception
+          {item?.deposit_percentage ? (
+            <>
+              {item?.deposit_percentage * 100}% upfront,{" "}
+              {100 - item?.deposit_percentage * 100}% after reception
+            </>
+          ) : (
+            "N/A"
+          )}
         </div>
       </div>
       {/* Sample Section */}
@@ -106,7 +118,20 @@ const DrawerContent = ({ item }) => {
         <div className="secondaryText">
           Review <Image src={InfoIcon} alt="info icon" />
         </div>
-        <div className={styles.rowInput}>N/A</div>
+        <div className={styles.rowInput}>
+          {item?.product_quotes?.[0]
+            ? item?.product_quotes?.[0]?.tags.map((tag, index) => {
+                console.log(tag);
+                return (
+                  <LabelQuote
+                    // @ts-ignore
+                    type={tag}
+                    key={index}
+                  />
+                );
+              })
+            : "N/A"}
+        </div>
       </div>
       <div className={styles.drawerRow}>
         <div className="secondaryText">Notes</div>
@@ -117,11 +142,12 @@ const DrawerContent = ({ item }) => {
       <div className={styles.drawerRow}>
         <div className="secondaryText">Files</div>
         <div className={styles.rowInput}>
-          {quote?.files.length ? (
-            quote?.files?.map((file) => {
+          {quote?.files?.length ? (
+            quote?.files?.map((file, index) => {
               return (
                 <div
                   className={styles.files}
+                  key={index}
                   style={item?.recommended ? { backgroundColor: "white" } : {}}
                 >
                   <div>
